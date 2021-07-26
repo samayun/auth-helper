@@ -1,10 +1,10 @@
 {
-  "name": "auth-helper",
+  "name": "jwt-auth-helper",
   "version": "1.0.0",
   "description": "collection of authentication related helper function",
   "main": "index.js",
   "directories": {
-    "lib": "./lib"
+    "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,14 +21,16 @@
     "permissions",
     "authorization"
   ],
-  "author": "Samayun Miah Chowdhury (samayun) <samayun.m.chowdhury@gmail.com> (https://samayunmc.vercel.app)",
+  "author": "Samayun Miah Chowdhury <samayun.m.chowdhury@gmail.com> (samayun)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samayun/auth-helper/issues"
   },
   "homepage": "https://github.com/samayun/auth-helper#readme",
   "dependencies": {
+    "auth-helper": "^1.0.0",
     "bcrypt": "^5.0.1",
     "jsonwebtoken": "^8.5.1"
-  }
+  },
+  "devDependencies": {}
 }

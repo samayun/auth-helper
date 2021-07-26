@@ -1,4 +1,4 @@
-# auth-helper
+# jwt-auth-helper
 
 collection of authentication related helper function
 
@@ -6,7 +6,7 @@ collection of authentication related helper function
 Installation is as simple as any other `npm` package:
 
 ```
-$ npm install auth-helper
+$ npm install jwt-auth-helper
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ $ npm install auth-helper
 ### Hash data
 
 ```js
-const { BCrypt } = require('auth-helper');
+const { BCrypt } = require('jwt-auth-helper');
 
 async function signup() {
     const hashedPassword = await BCrypt.makeHash("password");
@@ -31,7 +31,7 @@ signup();
 ### compare hashed data
 
 ```js
-const { BCrypt } = require('auth-helper');
+const { BCrypt } = require('jwt-auth-helper');
 
 async function login() {
     const isMatched = await BCrypt.compareHash("password", "$2b$10$P6fFTv5nUlIS57E8Yb8qiOk72FdoVgYmfewEcEGUddrgGwXIg5QfO");
@@ -45,7 +45,7 @@ login();
 ### Generate encoded data
 
 ```js
-const { JWT } = require('auth-helper');
+const { JWT } = require('jwt-auth-helper');
 
 const jwt = new JWT(process.env.SECRET || "JWT_SECRET_KEY");
 
@@ -67,7 +67,7 @@ ResponseAuthTokenFromUser();
 ### decode encoded data
 
 ```js
-const { JWT } = require('auth-helper');
+const { JWT } = require('jwt-auth-helper');
 
 const jwt = new JWT(process.env.SECRET || "JWT_SECRET_KEY");
 
